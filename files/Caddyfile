@@ -36,3 +36,14 @@ https://factory-dasim.self-data.alpha.grandlyon.com {
     on_demand
   }
 }
+
+# Grafana
+https://grafana.self-data.alpha.grandlyon.com {
+  reverse_proxy http://host.docker.internal:3000
+
+  # On demand TLS
+  tls {
+    protocols tls1.2 tls1.3
+    on_demand
+  }
+}
